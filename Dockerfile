@@ -8,8 +8,8 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install flask
-RUN pip install langchain
+RUN pip install flask flask-socketio openai langchain python-dotenv chromadb tiktoken
+
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
