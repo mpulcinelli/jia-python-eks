@@ -1,5 +1,5 @@
 # Use an official Python runtime as a base image
-FROM python:3.7-slim-buster
+FROM python:3.11
 
 # Set the working directory in the container to /app
 WORKDIR /app
@@ -9,6 +9,7 @@ COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install flask
+RUN pip install langchain
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
